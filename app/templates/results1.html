@@ -1,0 +1,124 @@
+<!-- Boostrap HTML CSS for Design -->
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Our Suggestions</title>
+  <style>
+    body {
+      background-color: #013d5b;
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 20px;
+      padding: 16px 8px;
+      margin: 8px 0;
+    }
+
+    form {
+      width: 80%;
+      height: 100%;
+      border: 5px solid #ce2d2e;
+      display: inline-block;
+      background-color: #efefefff;
+      padding: 16px 8px;
+      margin-top: 5%;
+    }
+
+    h3 {
+      padding-bottom: 2%;
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    h4 {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      padding-bottom: 2%;
+      text-align: center;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    
+    h4:hover{
+      color: ce2d2e;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      margin-top: 5%;
+      height:min-content;
+    }
+
+    li {
+      float: center;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #ce2d2e;
+    }
+
+    .active {
+      background-color: #ce2d2e;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="home">Home</a></li>
+    <li><a href="about">About</a></li>
+  </ul>
+  <form>
+    <header>
+      <p></p>
+      <center>
+        <img src="https://credit-riser.github.io/credit-riser-logo.png" width="22%" height="22%">
+        <h3>Our Suggestions!</h3>
+      </center>
+    </header>
+
+
+    {% for symbol in news %}
+    <h4>{{news[symbol]}}</h4>
+    <!--
+        <h4><a href = "{{news[symbol]['url']}}" target="_blank">{{news[symbol]['name']}}</a></h4>
+        <p>{{news[symbol]['hq_address']}}</p>
+        <hr style="height:1px;border:none;color:black;background-color:black;">
+      -->
+
+    {% endfor %}
+
+    <h5></h5>
+    <center>
+      <img style="border: 2px solid black;"" src="/plot.png" alt="my plot">
+    </center>
+    <h4></h4>
+  </form>
+</body>
+
+</html>
