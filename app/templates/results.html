@@ -1,0 +1,221 @@
+<!-- Boostrap HTML CSS for Design -->
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our Suggestions</title>
+    <style>
+        body {
+            background-color: #013d5b;
+            display: flex;
+            justify-content: center;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 20px;
+            padding: 16px 8px;
+            margin-top: 5%;
+        }
+
+        form {
+            width: 80%;
+            height: 100%;
+            border: 5px solid #ce2d2e;
+            display: inline-block;
+            background-color: #efefefff;
+            padding: 16px 8px;
+
+        }
+
+        h3 {
+            padding-bottom: 2%;
+            display: flex;
+            justify-content: center;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        h4 {
+            display: flex;
+            justify-content: center;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            padding-bottom: 2%;
+            text-align: center;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        .table {
+            border: 1px solid black;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        .tableheading1 {
+            padding-bottom: 0%;
+            /* float: left */
+            /* margin-left: 10%; */
+            /* text-align: left; */
+        }
+
+        .tableheading2 {
+            padding-bottom: 0%;
+            /* float: right */
+            /* margin-right: 10%; */
+            /* text-align: right; */
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .tables {
+            width: 100%;
+        }
+
+
+        h4:hover{
+      color: #ce2d2e;
+    }
+    ul {
+      list-style-type:none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #ce2d2e;
+      margin-top: 0;
+      height: min-content;
+    }
+
+    li {
+      float: none;
+    }
+
+    li a {
+      display:inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      color: white;
+      background-color: #333;
+      text-decoration: none;
+    }
+
+    .active {
+      background-color: #ce2d2e;
+    }
+
+
+        /* .image {
+          display: block;
+      } */
+
+        /* .table1 {
+        float: left;
+        width: 40%;
+      }
+      .table2 {
+        float: right;
+        width: 40%;
+      } */
+
+        /* * {
+            box-sizing: border-box;
+        }
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 50%;
+            padding: 5px;
+        } */
+    </style>
+</head>
+
+<body>
+    
+    <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About</a></li>
+    </ul>
+   
+    <form>
+            <header>
+                <p></p>
+                <center>
+                    <img src="https://credit-riser.github.io/credit-riser-logo.png" width="22%" height="22%">
+                    <h3>Our Suggestions!</h3>
+                </center>
+            </header>
+
+
+            {% for symbol in news %}
+            <h4>{{news[symbol]}}</h4>
+            <!--
+    <h4><a href = "{{news[symbol]['url']}}" target="_blank">{{news[symbol]['name']}}</a></h4>
+    <p>{{news[symbol]['hq_address']}}</p>
+    <hr style="height:1px;border:none;color:black;background-color:black;">
+  -->
+
+            {% endfor %}
+
+            <h5></h5>
+
+            <!-- <h3 class="tableheading1">Your Budget Reduction Plan</h3>
+    <class="table1">{{ tableCustomer }}</class>
+    <h3 class="tableheading2">Similar Customer's Budget Reduction Plan</h3>
+    <class="table2">{{ tableSample }}</class> -->
+            <center>
+                <!-- <div class="tables">
+    <div class="left"> -->
+                <h3 class="tableheading1">Your Budget Reduction Plan</h3>
+                {{ tableCustomer }}
+                <!-- </div> -->
+                <h4></h4>
+                <!-- <div class="right"> -->
+                <h3 class="tableheading2">Similar Customer's Budget Reduction Plan</h3>
+                {{ tableSample }}
+                <!-- </div>
+    </div> -->
+            </center>
+            <center>
+                <h4></h4>
+                <span>
+                    <img class="image" style="border: 2px solid black;"" src="/plot.png" alt="my plot">
+                </span>
+            </center>
+            <h4></h4>
+        </form>
+</body>
+
+</html>
