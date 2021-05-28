@@ -1,4 +1,4 @@
-# final-code
+# Final Code: Credit Riser
 
 https://credit-riser-app.herokuapp.com/
 
